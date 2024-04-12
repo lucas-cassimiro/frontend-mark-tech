@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mark Tech - Início</title>
+
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+  <body>
+    <header class="container-header">
+      <a href="/">Mark Tech</a>
+      <nav>
+        <ul>
+          <li>
+            <a href="./login-client.html">Login do Cliente</a>
+          </li>
+          <li>
+            <a href="./login-partner.html">Login Portal do Parceiro</a>
+          </li>
+          <li class="dropdown">
+            <a class="cadastro-modal">Cadastro</a>
+            <div class="dropdown-content">
+              <a href="./register-client.html" class="registers"
+                >Cadastro de Clientes</a
+              >
+              <a href="./register-partner.html" class="registers"
+                >Cadastro de Parceiros</a
+              >
+              <a href="./product-register.html" class="registers"
+                >Cadastro de Produtos</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="./cart.html">Carrinho de compras</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container-main">
+      <div>
+        <h1>Você já é nosso parceiro ou cliente?</h1>
+        <select id="selectRedirect">
+          <option value="">Selecione uma opção</option>
+          <option value="cliente">Cliente</option>
+          <option value="parceiro">Parceiro</option>
+        </select>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+      document
+        .getElementById("selectRedirect")
+        .addEventListener("change", function () {
+          var selectedOption = this.value;
+          if (selectedOption === "cliente") {
+            window.location.href = "./login-client.html";
+          } else if (selectedOption === "parceiro") {
+            window.location.href = "./login-partner.html";
+          }
+        });
+    </script>
+  </body>
+</html>

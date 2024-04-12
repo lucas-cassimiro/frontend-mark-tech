@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark Tech - Carrinho de compras</title>
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+  <body>
+  <header class="container-header">
+      <a href="/">Mark Tech</a>
+      <nav>
+        <ul>
+          <li>
+            <a href="./login-client.html">Login do Cliente</a>
+          </li>
+          <li>
+            <a href="./login-partner.html">Login Portal do Parceiro</a>
+          </li>
+          <li class="dropdown">
+            <a class="cadastro-modal">Cadastro</a>
+            <div class="dropdown-content">
+              <a href="./register-client.html" class="registers"
+                >Cadastro de Clientes</a
+              >
+              <a href="./register-partner.html" class="registers"
+                >Cadastro de Parceiros</a
+              >
+              <a href="./product-register.html" class="registers"
+                >Cadastro de Produtos</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="./cart.html">Carrinho de compras</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container-cart">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Produto</th>
+              <th>QTD</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="./src/assets/arroz-camil.jpeg" alt="Arroz" />
+              </td>
+              <td>
+                <h4>Arroz Camil - 1KG</h4>
+                <span>R$19,99</span>
+              </td>
+              <td>
+                <div>
+                  <button type="button">
+                    <img
+                      src="./src/assets/circle-minus.svg"
+                      alt="Remover quantidade"
+                    />
+                  </button>
+                  <span>1</span>
+                  <button type="button">
+                    <img
+                      src="./src/assets/circle-plus.svg"
+                      alt="Adicionar quantidade"
+                    />
+                  </button>
+                </div>
+              </td>
+              <td>
+                <h5>R$19,99</h5>
+              </td>
+              <td>
+                <button type="button">
+                  <FaTrashAlt />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./src/assets/feijao-camil.webp" alt="Feijão" />
+              </td>
+              <td>
+                <h4>Feijão Camil - 1KG</h4>
+                <span>R$12,99</span>
+              </td>
+              <td>
+                <div>
+                  <button type="button">
+                    <img
+                      src="./src/assets/circle-minus.svg"
+                      alt="Remover quantidade"
+                    />
+                  </button>
+                  <span>1</span>
+                  <button type="button">
+                    <img
+                      src="./src/assets/circle-plus.svg"
+                      alt="Adicionar quantidade"
+                    />
+                  </button>
+                </div>
+              </td>
+              <td>
+                <h5>R$12,99</h5>
+              </td>
+              <td>
+                <button type="button">
+                  <FaTrashAlt />
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="cart-summary">
+          <button id="checkout-button" type="button">Finalizar Pedido</button>
+          <span>Total <strong>R$32,98</strong></span>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const checkoutButton = document.getElementById("checkout-button");
+
+      checkoutButton.addEventListener("click", () => {
+        window.location.href = "/checkout.html";
+      });
+    </script>
+  </body>
+</html>
