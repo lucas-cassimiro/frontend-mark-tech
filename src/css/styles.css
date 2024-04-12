@@ -338,9 +338,11 @@
 
 .container-main {
   display: flex;
-  justify-content: center;
+  align-items: center;
 
-  height: 100vh;
+  flex-direction: column;
+
+  height: 100%;
 
   background: #201b2c;
 
@@ -360,6 +362,8 @@
   text-align: center;
 
   margin-left: 100px;
+
+  margin-bottom: 50px;;
 
   border-radius: 20px;
 }
@@ -666,4 +670,34 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #0056b3;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+
+  gap: 40px;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+.carousel h1 {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.carousel > div {
+  display: flex;
+  justify-content: center;
+
+  gap: 50px;
+}
+
+.carousel > div img {
+  width: 300px;
+
+  margin-bottom: 30px;
 }
